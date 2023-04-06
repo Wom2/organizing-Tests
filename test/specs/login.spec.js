@@ -11,7 +11,6 @@ describe('My Login application', () => {
         await expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
     });
-    
     it('should logout', async () => {
         await LoginPage.open();
 
@@ -21,7 +20,6 @@ describe('My Login application', () => {
         await SecurePage.logout();
         await expect(browser).toHaveUrl('https://the-internet.herokuapp.com/login');
     });
-    
     it('should fail to login with invalid credentials', async () => {
         await LoginPage.open();
 
